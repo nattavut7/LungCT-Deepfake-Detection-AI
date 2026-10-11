@@ -13,14 +13,10 @@ GitHub-ready research code for:
 
 ## Recommended Windows location
 
-Extract to:
-
-`F:\Python\LungCT_Deepfake_Detection_TCI1`
-
 Expected dataset:
 
 ```text
-F:\Datasets\Medical-Deepfakes-Lung-Cancer\
+Medical-Deepfakes-Lung-Cancer\
 ├── labels.csv
 └── images\
     └── <UUID>\
