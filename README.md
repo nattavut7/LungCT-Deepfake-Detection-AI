@@ -32,7 +32,6 @@ Edit the paths in `configs\efficientnet_b0_focal.yaml`.
 ## Install
 
 ```bat
-cd /d F:\Python\LungCT_Deepfake_Detection_TCI1
 python -m pip install -r requirements.txt
 ```
 
