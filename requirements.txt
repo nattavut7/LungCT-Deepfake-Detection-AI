@@ -1,0 +1,12 @@
+torch>=2.6
+torchvision>=0.21
+numpy>=1.26
+pandas>=2.2
+pydicom>=3.0
+scikit-learn>=1.5
+matplotlib>=3.9
+PyYAML>=6.0
+Pillow>=10.4
+opencv-python>=4.10
+gradio>=5.0
+tqdm>=4.66

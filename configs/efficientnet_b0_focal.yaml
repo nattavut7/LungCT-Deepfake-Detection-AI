@@ -1,0 +1,43 @@
+project:
+  name: lung_ct_deepfake_detection
+  seed: 2026
+  split_seed: 2026
+
+data:
+  images_dir: "F:/Datasets/Medical-Deepfakes-Lung-Cancer/images"
+  labels_csv: "F:/Datasets/Medical-Deepfakes-Lung-Cancer/labels.csv"
+  split_csv: "outputs/splits/patient_split.csv"
+  image_size: 224
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  preprocessing: "minmax"
+  lung_center: -600
+  lung_width: 1500
+
+model:
+  architecture: "efficientnet_b0"
+  pretrained: true
+  num_classes: 2
+
+training:
+  epochs: 100
+  batch_size: 16
+  workers: 4
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  optimizer: "adamw"
+  early_stopping: 10
+  amp: true
+  use_cuda: true
+
+imbalance:
+  loss: "focal"
+  focal_gamma: 2.0
+  balanced_sampling: false
+
+selection:
+  primary_metric: "pr_auc"
+
+output:
+  root: "outputs"
